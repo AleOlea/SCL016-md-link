@@ -11,7 +11,7 @@
     "name": "ale Ole",
     "email": "aleole@gmail.com"
   },
-  "bin": {},
+ 
   "keywords": [
     "links",
     "javascript",
@@ -19,6 +19,7 @@
     "node.js",
     "markdown"
   ],
+  
   "license": "MIT",
   "dependencies": {
   

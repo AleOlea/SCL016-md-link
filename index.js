@@ -1,19 +1,27 @@
 let fs = require("fs")
 let path = require ("path")
 
-//Read a file and print content to the console
+// //Read a file and print content to the console
 const mdLinks = (path) => {
 
-  fs.readFile( path, "utf8", (err, data) => {
-    if(err) {
-      console.log("error: ", err)
-      //return
+new Promise
+  ((resolve, reject) => {
+    fs.readFile(path, "utf8", (err, data) => {
+      if(err) {
+        reject(err)
     } else {
-      console.log(data)
+      resolve(data)
       return data  
     }
+    })
   })
-};
+.then(data => {
+  console.log(data)
+})
+.catch(err => {
+  console.log(err)
+})
+}
 
-module.exports = mdLinks;
 
+ module.exports = mdLinks;
