@@ -1,8 +1,3 @@
-/*!
- * is-valid-path <https://github.com/jonschlinkert/is-valid-path
- * Copyright (c) 2015 Jon Schlinkert, contributors.
- * Licensed under the MIT license.
- */
 //Returns true if a file path does not contain any invalid characters or is empty
 'use strict';
 let fs = require("fs")

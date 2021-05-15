@@ -3,6 +3,9 @@ let fs = require("fs")
 let path = require ("path")
 const readdirp = require('readdirp');
 
+  //validar si es archivo o carpeta
+// saber si es ruta absoluta o relativa libreria o terminal
+
 const mdLinks = () => {
 // Validar si input valid.  QUESTION: por que no funciona?
 // const isValidPath = (path) => {
