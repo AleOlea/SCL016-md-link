@@ -1,7 +1,7 @@
 {
   "name": "md-links",
   "version": "0.1.0",
-  "description": "provide info about links and stats from md file input",
+  "description": "This is a project to read md links and return some stats ",
   "main": "./index.js",
   "repository": {
     "type": "git",
@@ -11,18 +11,14 @@
     "name": "ale Ole",
     "email": "aleole@gmail.com"
   },
- 
   "keywords": [
     "links",
-    "javascript",
-    "jest",
-    "node.js",
-    "markdown"
+    "md" 
   ],
-  
   "license": "MIT",
-  "dependencies": {
   
+  "dependencies": {
+    "is-valid-path": "^0.1.1",
     "readdirp": "^3.6.0"
   }
 }
