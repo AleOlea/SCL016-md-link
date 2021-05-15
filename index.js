@@ -1,7 +1,7 @@
 let fs = require("fs")
 let path = require ("path")
 
-// //Read a file and print content to the console
+// Read the file and print content to the console
 const mdLinks = (path) => {
 
 new Promise
@@ -10,9 +10,10 @@ new Promise
       if(err) {
         reject(err)
     } else {
+      console.log("Aqui esta el contenido de tu carpeta:")
       resolve(data)
       return data  
-    }
+      }
     })
   })
 .then(data => {
@@ -23,5 +24,4 @@ new Promise
 })
 }
 
-
- module.exports = mdLinks;
+module.exports = mdLinks;

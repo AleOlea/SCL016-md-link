@@ -11,10 +11,9 @@ const pathToValidate = (process.argv[2])
 const isValidPath = isValid(pathToValidate)
   console.log(isValidPath)
     if (isValid(pathToValidate)===false){
-     
       console.log("please enter a valid input")
       } else {
-      console.log("Welcome!")
+      console.log("Hola, soy valida! y ahora....?")
     }
 return isValidPath
 }
