@@ -10,7 +10,7 @@ new Promise
       if(err) {
         reject(err)
     } else {
-      console.log("Aqui esta el contenido de tu carpeta:")
+      console.log("Bueno, aqui esta el contenido de tu carpeta:")
       resolve(data)
       return data  
       }
