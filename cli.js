@@ -7,9 +7,8 @@ const isValidInput = require("./is-valid");
 
 
 
-//verify if file path does not contain any invalid characters or it is empty
+//verify file path does not contain any invalid characters or is empty
 const isValid = isValidPath();
-
 
 
 
