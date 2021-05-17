@@ -6,4 +6,3 @@ manzana, pera, platano
 manzana, pera, platano
 manzana, pera, platano
 manzana, pera, platano
-TRATANDO DE COMITEAR
