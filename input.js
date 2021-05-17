@@ -5,14 +5,6 @@ let resolve = require('path').resolve
 const isValid = require('is-valid-path');
 
 const validateInput = () => {
-
-//Returns true if a file path does not contain any invalid characters or is empty
-const isValIn = isValid(files)
-console.log("Is valid File")
-
-const ext = path.extname(files);
-console.log("The extension is:", ext)
-
 //file exists
 fs.access(files, fs.F_OK, (err) => {
   if (err) {
@@ -21,13 +13,17 @@ fs.access(files, fs.F_OK, (err) => {
   }
   console.log("File exists")
 })
+//Returns true if file path does not contain any invalid characters or empty
+const isValIn = isValid(files)
+console.log("Is valid File")
 //path is absolute?
 const isAbs = path.isAbsolute(files)
 console.log("path is absolute?:", isAbs)
-if (path.isAbsolute(files) === false){
+if (!path.isAbsolute(files)){
 //make it absolute
-const makeItAbs= resolve(files)
-console.log("MAKE IT ABS:", makeItAbs)
+const makeItAbs = resolve(files)
+files = makeItAbs
+console.log("now it is abs", makeItAbs)
  } else {
    console.log("already absolute")
  }
