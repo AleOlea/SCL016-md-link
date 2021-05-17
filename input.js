@@ -8,15 +8,18 @@ const validateInput = () => {
 
 //Returns true if a file path does not contain any invalid characters or is empty
 const isValIn = isValid(files)
-console.log("nada raro")
+console.log("Is valid File")
+
+const ext = path.extname(files);
+console.log("The extension is:", ext)
 
 //file exists
 fs.access(files, fs.F_OK, (err) => {
   if (err) {
-    console.error("file does not exists")
+    console.error("File does not exists")
     return
   }
-  console.log("file exists")
+  console.log("File exists")
 })
 //path is absolute?
 const isAbs = path.isAbsolute(files)
