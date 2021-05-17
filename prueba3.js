@@ -5,7 +5,7 @@ let files = process.argv[2]
 const mdLinks = () => {
 
 const ext = path.extname(files)
-console.log("The extension is:", ext)
+console.log("The extension is gui gui gui:", ext)
   if(ext === ".md"){
     console.log("wow")
 
