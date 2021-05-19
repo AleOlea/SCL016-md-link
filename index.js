@@ -1,67 +1,50 @@
-// esto si funciona, la cambie para incorporar el flow if md
 let fs = require("fs")
 let path = require ("path")
+const marked = require("marked");
 let files = process.argv[2]
 
 const mdLinks = () => {
-
 const ext = path.extname(files)
-console.log("The extension is gui gui gui:", ext)
+  console.log("1.-File extension is:", ext)
   if(ext === ".md"){
-    console.log("wow")
-
-new Promise
-  ((resolve, reject) => {
+  new Promise
+    ((resolve, reject) => {
     fs.readFile(files, "utf8", (err, data) => {
       if(err) {
         reject(err)
     } else {
-      console.log("Bueno, aqui esta el contenido de tu carpeta:")
       resolve(data)
-      return data  
+      const arrayLinks = [];
+      let render = new marked.Renderer();
+      render.link = function(href, title, text) {
+        const linkElements = {
+          href,
+          text,
+          file: files,
+        };
+        arrayLinks.push(linkElements);
+      };
+      marked(data, {
+        renderer: render
+      })
+      console.log("2.", arrayLinks)
+      console.log("3.-", data)
+      return data 
       }
     })
   })
 .then(data => {
-  console.log(data)
+  // console.log(data)
 })
 .catch(err => {
   console.log(err)
 })
 } else {
-  console.log("no md files here!")
+  console.log("4.- no md files here!")
+  
 }
+return mdLinks
 }
 // mdLinks()
 module.exports = mdLinks;
 
-
-
-//Preguntar a Sergio
-//esta es la version que me recomendó la Ely tiene el path en cli pero no me funcionaba con el if md
-// let fs = require("fs")
-// let path = require ("path")
-
-// // Read the file and print content to the console
-// const mdLinks = (path) => {
-
-
-// new Promise
-//   ((resolve, reject) => {
-//     fs.readFile(path, "utf8", (err, data) => {
-//       if(err) {
-//         reject(err)
-//     } else {
-//       console.log("Bueno, aqui esta el contenido de tu carpeta:")
-//       resolve(data)
-//       return data  
-//       }
-//     })
-//   })
-// .then(data => {
-//   console.log(data)
-// })
-// .catch(err => {
-//   console.log(err)
-// })
-// }
