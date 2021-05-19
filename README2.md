@@ -1,5 +1,5 @@
 
-## 1. README DE PRUEBA README DE PRUEBA README DE PRUEBA
+## 1. README DE PRUEBA README DE PRUEBA 
 
 muito popular entre os programadores. É usada em muitas plataformas que
 manipulam texto (GitHub, fórum, blogs e etc) e é muito comum encontrar arquivos
