@@ -4,6 +4,10 @@ const marked = require("marked");
 const fetch = require("node-fetch")
 let files = process.argv[2]
 
+linksFn = (lk) => {
+  console.log(lk)
+}
+
 const mdLinks = () => {
 //Get extension 
 const ext = path.extname(files)
@@ -20,10 +24,10 @@ const ext = path.extname(files)
 //Get links
 const arrayLinks = [];
 let render = new marked.Renderer();
-  render.link = function(href, title, text) {
+  render.link = function(href , title, text) {
 const linkElements = {
-href,
-text,
+href, 
+text, 
 file: files,
   };
 arrayLinks.push(linkElements);
@@ -33,6 +37,11 @@ arrayLinks.push(linkElements);
   renderer: render
   })
   console.log("2.- LINKS ENCONTRADOS SON:", arrayLinks)
+  
+  arrayLinks.forEach((l) => {
+    fetch(l.href)
+    .then( res => console.log(res.ok, '=> ', res.status,' => ', res.statusText)) // por medio del res.XXX puedes acceder a los valores del json de respuesta.
+  })
   // console.log("3.-", data)//comentado para trabajar con options
   return data 
     }
@@ -46,21 +55,15 @@ arrayLinks.push(linkElements);
 } else {
   console.log("4.- no md files here!") 
 }
+
+
 return mdLinks
 }
 // mdLinks()
 module.exports = mdLinks;
 
 
-//http requests
 
-// fetch('https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg')
-//     .then(res => {
-//         console.log(res.ok);
-//         console.log(res.status);
-//         console.log(res.statusText);
-//         console.log(res.headers.get('content-type'));
-//     });
 
 
 
