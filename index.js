@@ -5,6 +5,7 @@ const fetch = require("node-fetch")
 let files = process.argv[2]
 
 linksFn = (lk) => {
+  
   console.log(lk)
 }
 
@@ -22,6 +23,7 @@ const ext = path.extname(files)
     } else {
     resolve(data)
 //Get links
+//TO-DO esto deberia ser una funcion
 const arrayLinks = [];
 let render = new marked.Renderer();
   render.link = function(href , title, text) {
@@ -37,10 +39,13 @@ arrayLinks.push(linkElements);
   renderer: render
   })
   console.log("2.- LINKS ENCONTRADOS SON:", arrayLinks)
-  
+
+//http request
+//TO-DO esto deberia ser una funcion
+ 
   arrayLinks.forEach((l) => {
     fetch(l.href)
-    .then( res => console.log(res.ok, '=> ', res.status,' => ', res.statusText)) // por medio del res.XXX puedes acceder a los valores del json de respuesta.
+    .then( res => console.log("Link funciona?",res.ok, '=> ', "status",res.status,' => ', "it is", res.statusText)) // por medio del res.XXX puedes acceder a los valores del json de respuesta.
   })
   // console.log("3.-", data)//comentado para trabajar con options
   return data 
@@ -55,7 +60,6 @@ arrayLinks.push(linkElements);
 } else {
   console.log("4.- no md files here!") 
 }
-
 
 return mdLinks
 }
