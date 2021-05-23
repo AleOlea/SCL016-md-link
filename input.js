@@ -16,6 +16,7 @@ fs.access(files, fs.F_OK, (err) => {
 const isValIn = isValid(files)
 console.log("Is valid File")
 //path is absolute?
+//TO-DO esto deberia ser una función?
 const isAbs = path.isAbsolute(files)
 console.log("path is absolute?:", isAbs)
 if (!path.isAbsolute(files)){
@@ -26,7 +27,7 @@ console.log("Path made abs =>", makeItAbs)
  } else {
    console.log("Is already absolute")
  }
- return isAbs
+ return validateInput
 }
 // validateInput()
 
