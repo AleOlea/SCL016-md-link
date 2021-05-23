@@ -2,6 +2,8 @@ let fs = require("fs")
 let path = require ("path")
 let files = toString(process.argv[2])
 
+//ESTA FUNCION ENTREGA EL PATH COMPLETO A LOS DOCUMENTOS DENTRO DE UN ARCHIVO
+
 /**
  * Explores recursively a directory and returns all the filepaths and folderpaths in the callback.
  * 
@@ -42,7 +44,9 @@ filewalker(process.argv[2], function(err, data){
   }
 // ["c://some-existent-path/file.txt","c:/some-existent-path/subfolder"]
   console.log(data);
+  return filewalker
 });
+
 
 
 
