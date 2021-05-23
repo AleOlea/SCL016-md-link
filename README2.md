@@ -8,7 +8,7 @@ manipulam texto (GitHub, fórum, blogs e etc) e é muito comum encontrar arquivo
 
 (https://nodejs.org/es/about/)
 (https://nodejs.org/api/fs.html)
-(https://nodejs.org/api/http.html#http_http_get_options_callback)
+./some/example.md http://algo.com/2/3/ ok 200 Link a algo
 
 manipulam texto (GitHub, fórum, blogs e etc) e é muito comum encontrar arquivos
 com este formato em qualquer repositório (começando pelo tradicional
