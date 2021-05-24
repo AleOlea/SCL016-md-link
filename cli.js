@@ -16,6 +16,8 @@ if (input && arrOpts.includes("")){
 if (arrOpts.includes(input && "--stats")){
   // const inp = mdLinks()
   console.log(input + "--stats" )
+
+
  //QUIERO IMPRIMIR cantidad total de links en array links necesito funcion de aaray links para traer aqui
 }
 //Hacer peticion http para chequear links
@@ -28,7 +30,6 @@ if (arrOpts.includes("--stats" && "--validate")){
   console.log("stats & validate")
 
   //DAR ESTADISTICAS DE TOTAL, UNIQUE AND BROKEN
-  //NECESITO EL LARGO DEL ARRAY
   //NECESITO CONTAR LAS OK
   //NECESITO CONTAR LAS BROKEN
 }
