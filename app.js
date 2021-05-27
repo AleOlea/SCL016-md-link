@@ -1,19 +1,18 @@
-const mdLinks = require('./index2')
-path = process.argv[2]
-
-/*API*/
-
-mdLinks(path, { validate: true }) //or true
-    .then(res => console.log(res))
-    .catch(error => console.log(error)) 
-
+const mdLinks = require('./index2');
 
 /*
-caso que use parametros: 
-node app Readme2.md --validate --stats
+ API
+ */
+
+// mdLinks(path, { validate: false }) // false or true
+//   .then((res) => console.log(res))
+//   .catch((error) => console.log(error));
+
+/*
+CLI
+node app --validate --stats
 */
 
-// mdLinks(process.argv[2], process.argv.slice(3))
-//     .then(res => console.log(res))
-//     .catch(error => console.log(error))
-
+mdLinks(process.argv[2], process.argv.slice(3)) // porque silce 3 y no 3, 5
+  .then((res) => console.log(res))
+  .catch((error) => console.log(error));
