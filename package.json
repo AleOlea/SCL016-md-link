@@ -2,9 +2,9 @@
   "name": "md-links",
   "version": "0.1.0",
   "main": "./index.js",
- 
   "license": "MIT",
   "scripts": {
+    "eslint": "eslint --ext .js ./ test/",
     "test": "jest"
   },
   "dependencies": {
@@ -14,9 +14,10 @@
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^24.1.0",
     "jest": "^26.6.3"
   }
 }
-
-
-
