@@ -1,37 +1,42 @@
 #!/usr/bin/env node
 const mdLinks = require("./index.js");
 const validateInput = require("./input")
+// const pathMd = require ("./path.js")//que nombre se le pone a este const el de la función de origen u otro?
 
-const validInput = validateInput()
-// const input = mdLinks(process.argv[2])
-const input = (process.argv[2])
-//hasta aqui control zeta
-
+//mi primer codigo
+// const validInput = validateInput()
+// console.log(process.argv)
+const input = mdLinks(process.argv[2])
 const arrOpts = process.argv.slice(3, 5);
-//si solo path identificar archivo md-imprimir links con ruta y texto.(const arrayLinks)
-if (input && arrOpts.includes("")){
-  console.log("Input is: ", input)
+console.log(arrOpts)
+
+
+
+
+// const input = (process.argv[2])//para usarlo en el ciclo if junto a const inp = mdLinks() para que se ejecute la funcion.
+// mdLinks()
+//   const inp = mdLinks()
+
+//Caso 1
+if(!input){
+	console.log("Error no hay archivo que procesar");
 }
-
-if (arrOpts.includes(input && "--stats")){
-  // const inp = mdLinks()
-  console.log(input + "--stats" )
-
-
- //QUIERO IMPRIMIR cantidad total de links en array links necesito funcion de aaray links para traer aqui
+//Caso 2
+else if(input && arrOpts.length === 0){
+  console.log("hola 2")	 
 }
-//Hacer peticion http para chequear links
-if (arrOpts.includes("--validate")){
-  const inp = mdLinks()
-  console.log(input + "validate") 
+// //Caso 3
+else if(input && arrOpts.length === 1 && arrOpts.includes("--stats")){
+  console.log("hola 3")	
 }
-
-if (arrOpts.includes("--stats" && "--validate")){
-  console.log("stats & validate")
-
-  //DAR ESTADISTICAS DE TOTAL, UNIQUE AND BROKEN
-  //NECESITO CONTAR LAS OK
-  //NECESITO CONTAR LAS BROKEN
+// //Caso 4
+else if(input && arrOpts.length === 1 && arrOpts.includes("--validate")){
+  console.log("hola 4")	
 }
+// //Caso 5 y Caso 6
+else if(input && arrOpts.length === 2 && arrOpts.includes("--validate") && arrOpts.includes("--stats")){
+  console.log("hola 5")
+ }
+
 
 

@@ -1,20 +1,8 @@
 {
   "name": "md-links",
   "version": "0.1.0",
-  "description": "This is a project to read md links and return some stats ",
   "main": "./index.js",
-  "repository": {
-    "type": "git",
-    "url": "git + https://github.com/AleOlea/SCL016-md-link.git"
-  },
-  "author": {
-    "name": "ale Ole",
-    "email": "aleole@gmail.com"
-  },
-  "keywords": [
-    "links",
-    "md"
-  ],
+ 
   "license": "MIT",
   "scripts": {
     "test": "jest"

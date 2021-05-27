@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require('path');
 let files = process.argv[2];
 
-// esta funcion retorna verdadero oo false un input es directorio o documento
+// esta funcion retorna verdadero o false un input es directorio o documento
 
 const isDirOrFile =()=> fs.stat(files, (err, stats) => {
   if (err) {
@@ -16,6 +16,8 @@ let isDir = stats.isDirectory() //false
 
 })
 isDirOrFile()
+
+
 
 
 

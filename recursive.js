@@ -2,6 +2,8 @@ let fs = require("fs")
 let path = require ("path")
 let files = toString(process.argv[2])
 
+
+//RECUERDA PONER DIR NO FILE
 //ESTA FUNCION ENTREGA EL PATH COMPLETO A LOS DOCUMENTOS DENTRO DE UN ARCHIVO
 
 /**

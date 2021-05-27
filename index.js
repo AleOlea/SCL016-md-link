@@ -1,4 +1,4 @@
-let fs = require("fs")
+let fs = require('fs')
 let path = require ("path")
 const marked = require("marked");
 const fetch = require("node-fetch")
@@ -7,6 +7,8 @@ let files = process.argv[2]
 linksFn = (lk) => {
   console.log(lk)
 }
+
+
 
 const mdLinks = () => {
 //Get extension 
@@ -44,7 +46,7 @@ arrayLinks.push(linkElements);
 //TO-DO esto deberia ser una funcion
   arrayLinks.forEach((l) => {
     fetch(l.href)
-    .then( res => console.log("Link funciona?",res.ok, '=> ', "status",res.status,' => ', "it is", res.statusText)) // por medio del res.XXX puedes acceder a los valores del json de respuesta.
+    .then( res => console.log("Link funciona?",res.ok, '=> ', "status",res.status,' => ', "it is", res.statusText)) 
   })
   // console.log("3.-", data)//comentado para trabajar con options
   return data 
