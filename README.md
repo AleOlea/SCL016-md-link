@@ -41,10 +41,11 @@ Con `validate:true` :
 ./some/example.md http://algo.com/2/3/ ok 200 Link a algo
 ### -- validate --stats: Para obtner ambos resultados de la validación.
 ```
-
+```sh
 * $ md-links ./some/example.md --stats --
 * Total: 3
 * Unique: 3
+```
 
 ```sh
 * Se puede usar `--stats` y `--validate` jutos para obtener ambas estadísticas.
@@ -56,7 +57,7 @@ $ md-links ./some/example.md --stats --validate
 
 ### Diagrama de flujo
 
-<img src="flow.png" alt="paper-image" width="500"/>
+<img src="./flow.png" alt="paper-image" width="500"/>
 
 
 
