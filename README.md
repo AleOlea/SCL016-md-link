@@ -35,10 +35,6 @@ Con `validate:true` :
 ### 2) **CLI.** Usando la interfaz de Línea de Comando de la terminal con las siguientes opciones:
 ```sh
 ### md-links <path-to-file> [options]
-### [options] =
-### -- validate:  Petición HTTP para averiguar si el link funciona.  Output fail or ok.
-* $ md-links ./some/example.md --validate
-* ./some/example.md http://algo.com/2/3/ ok 200.
 ```
 
 ### --stats: Texto con estadísticas básicas sobre los links.
@@ -56,28 +52,7 @@ Con `validate:true` :
 * Broken: 1
 ```
 
-También podemos combinar `--stats` y `--validate` para obtener estadísticas que
-necesiten de los resultados de la validación.
-
-```sh
-$ md-links ./some/example.md --stats --validate
-Total: 3
-Unique: 3
-Broken: 1
-```
-
-##### `--stats`
-
-Si pasamos la opción `--stats` el output (salida) será un texto con estadísticas básicas sobre los links.
-
-```sh
-$ md-links ./some/example.md --stats
-Total: 3
-Unique: 3
-```
-
-También podemos combinar `--stats` y `--validate` para obtener estadísticas que
-necesiten de los resultados de la validación.
+### Se puede combinar `--stats` y `--validate` para obtener ambas estadísticas.
 
 ```sh
 $ md-links ./some/example.md --stats --validate
@@ -88,10 +63,10 @@ Broken: 1
 
 ### Diagrama de flujo
 
-<img src="md-flow.png" alt="paper-image" width="500"/>
+<img src="./md-flow.png" alt="paper-image" width="500"/>
 
 
-<!-- </div> -->
+</div>
 
 
 
