@@ -6,7 +6,7 @@
 ## Autora : Alejandra Olea 
 
 ## Objetivo General: 
-* Usando [Node.js] crear una herramienta de línea de comando (CLI) así como una librería en JavaScript que analice archivos en formato `Markdown`, verifique los links que contengan y reporte estadísticas.
+* Usando [Node.js] crear una herramienta que analice archivos en formato `Markdown` verifique los links que contenga y reporte estadísticas.
 
 
 ### Esta funcionalidad ofrece dos alternativas de uso:
@@ -39,12 +39,13 @@ Con `validate:true` :
 * $ md-links ./some/example.md --validate
 * Petición HTTP para averiguar si el link responde ok.
 ./some/example.md http://algo.com/2/3/ ok 200 Link a algo
-### -- validate --stats: Para obtner ambos resultados de la validación.
 ```
+
 ```sh
 * $ md-links ./some/example.md --stats --
 * Total: 3
 * Unique: 3
+* Broken: 0
 ```
 
 ```sh
@@ -57,7 +58,7 @@ $ md-links ./some/example.md --stats --validate
 
 ### Diagrama de flujo
 
-<img src="./flow.png" alt="paper-image" width="500"/>
+<img src="./images/flow-md.png" alt="paper-image" width="500"/>
 
 
 
